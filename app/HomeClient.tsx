@@ -54,25 +54,8 @@ export default function HomeClient() {
     setIsDownPaymentPercent(!isDownPaymentPercent)
   }
 
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "WebApplication",
-    name: "mortcalc.org Mortgage Calculator",
-    description:
-      "Free online mortgage calculator that helps you calculate monthly mortgage payments with taxes and insurance.",
-    url: "https://mortcalc.org",
-    applicationCategory: "FinanceApplication",
-    browserRequirements: "Requires JavaScript. Requires HTML5.",
-    offers: {
-      "@type": "Offer",
-      price: "0",
-      priceCurrency: "USD",
-    },
-  }
-
   return (
     <div className="bg-gray-100 py-4 px-4">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <Card className="w-full max-w-md mx-auto">
         <CardHeader>
           <CardTitle className="text-2xl font-bold text-center">Mortgage Calculator</CardTitle>
